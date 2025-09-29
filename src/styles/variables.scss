@@ -1,0 +1,50 @@
+:root {
+  // Paleta Principal
+  --primary-color: #413e4a;
+  --secondary-color: #73626e;
+  --tertiary-color: #b38184;
+  --quaternary-color: #f0b49e;
+  --quinary-color: #f7e4be;
+
+  --primary-color-light: #514f59;
+  --primary-color-dark: #2a2830;
+  --secondary-color-light: #85737f;
+  --secondary-color-dark: #5e4d59;
+  --tertiary-color-light: #c59497;
+  --tertiary-color-dark: #926265;
+  --quaternary-color-light: #f4c3ac;
+  --quaternary-color-dark: #e0927d;
+  --quinary-color-light: #f9f0d9;
+  --quinary-color-dark: #e6d4b0;
+
+  // Cores de Acento
+  --success-color: #5dea8b; // Verde (vitória, sucesso)
+  --warning-color: #fdb45d; // Laranja (energia, competição)
+  --error-color: #ff5a5a; // Vermelho (alerta, urgência)
+  --info-color: #5dc0ea; // Azul claro (informação)
+
+  // Cores Neutras
+  --text-color: #1e2328;
+  --text-secondary: #2a2f36;
+  --background-color: #fffbf9;
+
+  // Espaçamentos e Tipografia
+  --border-radius: 1.2rem;
+  --font-family: 'Poppins', sans-serif;
+  --line-height: 1.6;
+
+  --font-size-little-small: 1rem;
+  --font-size-small: 1.2rem;
+  --font-size-base: 1.4rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 2rem;
+
+  // Espaçamentos
+  --spacing-xxs: 0.4rem;
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1.6rem;
+  --spacing-md: 2.4rem;
+  --spacing-lg: 3.2rem;
+  --spacing-xl: 4.8rem;
+}
+
