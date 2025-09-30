@@ -1,27 +1,26 @@
 :root {
-  // Paleta Principal
-  --primary-color: #4e395d;
-  --secondary-color: #827085;
-  --tertiary-color: #8ebe94;
-  --quaternary-color: #ccfc8e;
-  --quinary-color: #dc5b3e;
-
-  --primary-color-light: #6c567b;
-  --secondary-color-light: #a08ca4;
-  --tertiary-color-light: #c0e0b4;
-  --quaternary-color-light: #e0f294;
-  --quinary-color-light: #f2b083;
+  // Paleta Principal (Terracota, Sálvia, Pêssego)
+  --primary-color: #A15B4C; // Terracota Profundo (Calidez, Autenticidade)
+  --secondary-color: #6C8578; // Verde Sálvia Suave (Natureza, Artesanato)
+  --tertiary-color: #F0A678; // Pêssego/Coral Suave (Acento de Destaque)
+  // ... (Outras cores terciárias, quaternárias podem ser ajustadas conforme necessário)
 
   // Cores de Acento
-  --success-color: #5dea8b; // Verde (vitória, sucesso)
-  --warning-color: #fdb45d; // Laranja (energia, competição)
-  --error-color: #ff5a5a; // Vermelho (alerta, urgência)
-  --info-color: #5dc0ea; // Azul claro (informação)
+  --success-color: #5dea8b;
+  --warning-color: #fdb45d;
+  --error-color: #ff5a5a;
+  --info-color: #5dc0ea;
 
   // Cores Neutras
-  --text-color: #1e2328;
-  --text-secondary: #2a2f36;
-  --background-color: #fffbf9;
+  --text-color: #2A2F36; // Um cinza escuro para melhor contraste
+  --text-secondary: #666; // Para textos menos importantes, como descrições
+  --white: #ffffff; // Pode ser útil definir o branco puro
+  --background-color: #FFF9F3; // Off-White Quente
+  --light-bg: #F8F0E9; // Fundo Suave para Seções (Adicionado para clareza)
+
+  // Sombras
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
 
   // Espaçamentos e Tipografia
   --border-radius: 1.2rem;
