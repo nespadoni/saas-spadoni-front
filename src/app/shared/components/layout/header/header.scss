@@ -38,6 +38,12 @@
   font-size: 28px;
   color: var(--secondary-color);
   transition: transform 0.2s ease;
+
+  img {
+    width: 50rem;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .header-nav-logo:hover {
