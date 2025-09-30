@@ -1,3 +1,16 @@
+/* Estado Inicial (Escondido) */
+.js-scroll-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Estado Ativo (Revelado) */
+.js-scroll-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.6s ease-out; /* A transição fica na classe ativa */
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -117,7 +130,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   animation: bounce 2s infinite;
 }
 

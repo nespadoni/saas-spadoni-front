@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {ScrollReveal} from '../../../shared/directives/scroll-reveal/scroll-reveal';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [
+    ScrollReveal
+  ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
