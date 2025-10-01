@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/assets/images/backgrounds/background-home-section.jpg');
+  background-image: url('/assets/images/backgrounds/background-home-section.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -332,7 +332,7 @@
 .btn {
   padding: 16px 40px;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -408,7 +408,10 @@ section {
 
 /* Categories */
 .categories {
+  /* Fundo principal. Use light-bg ou background-color */
   background: var(--light-bg);
+  position: relative;
+  overflow: hidden; /* Garante que os pseudo-elementos fiquem contidos */
 }
 
 .categories-grid {
@@ -440,14 +443,12 @@ section {
 }
 
 .category-icon {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
 }
 
 .category-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
   color: var(--text-color);
 }
 
@@ -480,12 +481,16 @@ section {
 .product-image {
   width: 100%;
   height: 280px;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  color: #ccc;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
 }
 
 .product-info {
@@ -540,15 +545,19 @@ section {
 .artisan-avatar {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  color: var(--white);
-  font-weight: 700;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--tertiary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .artisan-name {
@@ -603,16 +612,68 @@ section {
   color: #666;
 }
 
-/* CTA Section */
+/* CTA Section - Com Imagem de Fundo e Overlay */
+
 .cta {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: var(--white);
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 100px 20px;
+  /* Cor de fallback para CTAs sem imagem */
+  background: var(--primary-color);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.cta-seller {
+  /* Fundo de fallback mais escuro para garantir o contraste */
+  background-color: #2A2F36;
+}
+
+/* 1. Imagem de Fundo (::after) - Apenas no .cta-seller */
+.cta-seller::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Caminho da sua imagem */
+  background-image: url('/assets/images/backgrounds/background-beneficios-artiza.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* 2. Overlay de Cor/Gradiente (::before) - Apenas no .cta-seller */
+.cta-seller::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  /* Gradiente do Terracota ao Verde Sálvia (ou um escuro para contraste) */
+  background:
+    linear-gradient(135deg, rgba(161, 91, 76, 0.7) 0%, rgba(42, 47, 54, 0.9) 100%);
+}
+
+/* Garante que o conteúdo textual e o botão estejam acima dos overlays */
+.cta-seller .container,
+.cta-seller h2,
+.cta-seller p,
+.cta-seller a {
+  position: relative;
+  z-index: 2;
 }
 
 .cta h2 {
   font-size: 2.8rem;
+  margin-bottom: 20px;
 }
 
 .cta p {
