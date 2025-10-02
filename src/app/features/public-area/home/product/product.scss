@@ -1,0 +1,161 @@
+/* 1. ESTILOS DO CONTAINER DO CARROSSEL */
+/* O .products-grid não define mais o grid; ele pode ser usado para margens */
+.products-section {
+  padding: 50px 0;
+}
+
+/* 2. REESTILIZAÇÃO DOS ELEMENTOS DO PRIMENG */
+/* Usa a classe customizada 'products-carousel' que definimos no HTML */
+:host ::ng-deep .products-carousel {
+  /* Garante que os botões de navegação não fiquem escondidos */
+  .p-carousel-prev,
+  .p-carousel-next {
+    color: var(--primary-color);
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+
+  /* Remove o padding padrão do PrimeNG para controlar o espaçamento no card-wrapper */
+  .p-carousel-item {
+    padding: 0 10px; /* Adiciona um pequeno espaçamento entre os itens */
+  }
+
+  /* Ajusta o estilo dos indicadores de página (os pontos) */
+  .p-carousel-indicator-list {
+    margin-top: 30px;
+  }
+}
+
+/* 3. ESTILOS DO CARTÃO DE PRODUTO (PRESERVADOS) */
+
+/* Wrapper que ajuda a controlar o espaçamento dentro do carrossel */
+.product-card-wrapper {
+  padding: 0 10px; /* Garante que os cards tenham espaço lateral */
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  /* Garante que o card ocupe o espaço dentro do carrossel */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  /* Mantém o efeito de elevação */
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+}
+
+.product-info {
+  padding: 10px 20px;
+  flex-grow: 1; /* Garante que o bloco de info use o espaço restante, se houver */
+}
+
+.product-store {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Aumenta o espaçamento entre os botões */
+  padding: 10px 0 20px; /* Ajusta o padding vertical na parte inferior */
+}
+
+/* Reestilizando o p-button para criar um círculo maior */
+:host ::ng-deep .product-actions {
+
+  /* Seletor para todos os p-buttons dentro de .product-actions */
+  .p-button {
+    /* Aumenta o tamanho base do botão para criar o círculo */
+    width: 3rem !important;
+    height: 3rem !important;
+    padding: 0 !important; /* Remove qualquer padding padrão */
+    border-radius: 50% !important; /* Força o formato circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Aumentando o tamanho do ícone (PI) */
+  .p-button-icon {
+    font-size: 1.2rem !important; /* Aumenta o ícone */
+  }
+
+  /* Estilizando o Botão de Coração (Outlined) */
+  /* Target: p-button.p-button-secondary.p-button-outlined (ou apenas o Outlined) */
+  .p-button-outlined {
+    background: var(--white) !important;
+    color: var(--secondary-color) !important;
+    border: 2px solid var(--secondary-color) !important;
+
+    &:hover {
+      background: var(--secondary-color) !important;
+      color: var(--white) !important;
+    }
+  }
+
+  /* Estilizando o Botão de Carrinho (Filled/Primário) */
+  /* Target: p-button sem outlined e com a classe ml-2 */
+  .p-button:not(.p-button-outlined) {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--white) !important;
+
+    &:hover {
+      background: var(--primary-color-dark) !important; /* Use uma cor mais escura no hover */
+      border-color: var(--primary-color-dark) !important;
+      transform: translateY(-2px); /* Adiciona um pequeno efeito de elevação */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

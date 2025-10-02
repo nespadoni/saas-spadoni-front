@@ -1,0 +1,28 @@
+<p-carousel
+  [value]="products"
+  [numVisible]="4"
+  [numScroll]="1"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+  [autoplayInterval]="5000"
+  containerStyleClass="products-carousel"
+>
+  <ng-template let-product #item>
+    <div class="product-card-wrapper">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/assets/images/produtos/{{ product.image }}" [alt]="product.name" />
+        </div>
+        <div class="product-info">
+          <div class="product-store">{{ product.store }}</div>
+          <div class="product-name">{{ product.name }}</div>
+          <div class="product-price">{{ product.price }}</div>
+        </div>
+        <div class="product-actions">
+          <p-button icon="pi pi-heart" severity="secondary" [outlined]="true"/>
+          <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
