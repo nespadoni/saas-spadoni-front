@@ -4,6 +4,9 @@
     <div class="hero-eyebrow">ACERVO ARTIZA</div>
     <h1>O Brasil artesanal<br>em um só lugar.</h1>
     <p class="hero-subtitle">Conectamos você aos melhores artesãos do país. Milhares de peças únicas, autênticas e com a qualidade que você merece.</p>
+    <div class="hero-badge">
+      <i class="fas fa-fire"></i> Mais de 200 novas peças esta semana
+    </div>
     <div class="hero-buttons">
       <a href="#" class="btn btn-primary">
         Explorar Peças Artesanais
@@ -31,54 +34,15 @@
     <i class="fas fa-chevron-down"></i>
   </div>
 </section>
+
+<!-- Products -->
 <section appScrollReveal class="products">
   <div class="container">
     <div class="section-header">
       <h2>Produtos em Destaque</h2>
-      <p>Descubra as criações mais populares dos nossos artesãos</p>
+      <p>Descubra as peças que são tendência no Acervo Artiza</p>
     </div>
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/assets/images/produtos/vaso-decorativo.png" alt="">
-        </div>
-        <div class="product-info">
-          <div class="product-store">Atelier Maria Silva</div>
-          <div class="product-name">Vaso Decorativo em Cerâmica</div>
-          <div class="product-price">R$ 189,90</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/assets/images/produtos/prato-ceramica.png" alt="">
-        </div>
-        <div class="product-info">
-          <div class="product-store">Spadoni Artesanatos</div>
-          <div class="product-name">Prato de Cerâmica</div>
-          <div class="product-price">R$ 145,00</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/assets/images/produtos/tabua-corte.png" alt="">
-        </div>
-        <div class="product-info">
-          <div class="product-store">Madeira & Arte</div>
-          <div class="product-name">Tábua de Corte Artesanal</div>
-          <div class="product-price">R$ 98,50</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/assets/images/produtos/brinco-resina.png" alt="">
-        </div>
-        <div class="product-info">
-          <div class="product-store">Resina Art Studio</div>
-          <div class="product-name">Brinco feito em Resina</div>
-          <div class="product-price">R$ 115,00</div>
-        </div>
-      </div>
-    </div>
+    <app-product></app-product>
   </div>
 </section>
 
@@ -172,41 +136,93 @@
   </div>
 </section>
 
-<!-- Featured Products -->
+<!-- How It Works -->
+<section appScrollReveal class="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">PROCESSO SIMPLES</div>
+      <h2>Como Funciona</h2>
+      <p>Do clique à sua casa em 3 passos simples</p>
+    </div>
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">01</div>
+        <div class="step-icon-wrapper">
+          <div class="step-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <h3>Explore o Catálogo</h3>
+        <p>Navegue por milhares de peças únicas criadas por artesãos verificados de todo o Brasil</p>
+        <div class="step-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>Curadoria de qualidade</span>
+        </div>
+      </div>
 
-<!-- Featured Artisans -->
+      <div class="step-item">
+        <div class="step-number">02</div>
+        <div class="step-icon-wrapper">
+          <div class="step-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <h3>Compre com Segurança</h3>
+        <p>Adicione ao carrinho, escolha o pagamento e finalize em segundos com total proteção</p>
+        <div class="step-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>Pagamento 100% seguro</span>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">03</div>
+        <div class="step-icon-wrapper">
+          <div class="step-icon">
+            <i class="fas fa-box-open"></i>
+          </div>
+        </div>
+        <h3>Receba em Casa</h3>
+        <p>Acompanhe todo o processo de envio e receba sua peça artesanal com embalagem especial</p>
+        <div class="step-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>Rastreamento em tempo real</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA adicional -->
+    <div class="how-it-works-cta">
+      <a href="#" class="btn btn-primary btn-large">
+        Começar Agora
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <span class="cta-note">Sem taxas ocultas • Frete para todo Brasil</span>
+    </div>
+  </div>
+</section>
+
+<!-- Store -->
+<section appScrollReveal class="store">
+  <div class="container">
+    <div class="section-header">
+      <h2>Lojas Parceiras</h2>
+      <p>Conheça as lojas que são parceiras do Acervo Artiza</p>
+    </div>
+    <app-store></app-store>
+  </div>
+</section>
+
+<!-- Artisans -->
 <section appScrollReveal class="artisans">
   <div class="container">
     <div class="section-header">
-      <h2>Artesãos em Destaque</h2>
+      <h2>Nossos Artesãos</h2>
       <p>Conheça os talentosos criadores por trás das peças</p>
     </div>
-    <div class="artisans-grid">
-      <div class="artisan-card">
-        <div class="artisan-avatar">
-          <img src="/assets/images/avatars/maria-silva.png" alt="Maria Silva Perfil">
-        </div>
-        <div class="artisan-name">Maria Silva</div>
-        <div class="artisan-specialty">Especialista em Cerâmica</div>
-        <div class="artisan-products">32 produtos disponíveis</div>
-      </div>
-      <div class="artisan-card">
-        <div class="artisan-avatar">
-          <img src="/assets/images/avatars/joao-paulo.png" alt="Joao Paulo Perfil">
-        </div>
-        <div class="artisan-name">João Paulo</div>
-        <div class="artisan-specialty">Mestre em Madeira</div>
-        <div class="artisan-products">28 produtos disponíveis</div>
-      </div>
-      <div class="artisan-card">
-        <div class="artisan-avatar">
-          <img src="/assets/images/avatars/ana-ferreira.png" alt="Ana Ferreira Perfil">
-        </div>
-        <div class="artisan-name">Ana Ferreira</div>
-        <div class="artisan-specialty">Arte em Resina</div>
-        <div class="artisan-products">45 produtos disponíveis</div>
-      </div>
-    </div>
+    <app-artisan></app-artisan>
   </div>
 </section>
 
@@ -250,11 +266,19 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section appScrollReveal class="testimonials">
+  <div class="container">
+    <app-testimonial></app-testimonial>
+  </div>
+</section>
+
+<!-- CTA -->
 <section appScrollReveal class="cta cta-seller">
   <div class="container">
     <h2>Sua arte. Seu sucesso.</h2>
     <p>Junte-se à Artiza.</p>
-    <p>Descubra como a Artiza oferece mais do que um espaço de venda. Conheça nossos benefícios exclusivos: segurança financeira (Pagamentos DECIMAIS), público qualificado e suporte logístico.</p>
+    <p>Descubra como a Artiza oferece mais do que um espaço de venda. Conheça nossos benefícios exclusivos: segurança financeira, público qualificado e suporte logístico.</p>
     <a href="/artesao/beneficios" class="btn btn-primary btn-large">
       <i class="fas fa-hand-holding-heart"></i>
       Benefícios de ser Artiza
