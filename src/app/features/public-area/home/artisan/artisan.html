@@ -1,0 +1,29 @@
+<p-carousel
+  [value]="artisan"
+  [numVisible]="4"
+  [numScroll]="1"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+  [autoplayInterval]="5000"
+  containerStyleClass="artisans-carousel"
+>
+  <ng-template let-artisan #item>
+    <div class="artisan-card-wrapper">
+      <div class="artisan-card">
+        <div class="artisan-avatar">
+          <img src="/assets/images/avatars/{{ artisan.image }}" [alt]="artisan.name" />
+        </div>
+        <div class="artisan-info">
+          <div class="artisan-name">{{ artisan.name }}</div>
+          <div class="artisan-specialty">{{ artisan.specialty }}</div>
+          <div class="artisan-products">{{ artisan.products }}</div>
+          <div class="artisan-state">{{ artisan.state }}</div>
+        </div>
+        <div class="artisan-actions">
+          <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+          <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
