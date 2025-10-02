@@ -1,27 +1,23 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {RouterLink, RouterLinkActive} from '@angular/router';
-import {NgClass, NgIf} from '@angular/common';
+import {RouterLink} from '@angular/router';
+import {Categories} from './categories/categories';
 
 @Component({
   selector: 'app-header',
   imports: [
     FormsModule,
     RouterLink,
-    RouterLinkActive,
+    Categories,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
 export class Header {
   searchQuery: any;
-  showCategoriesMenu: any;
 
   onSearch($event: SubmitEvent) {
 
   }
 
-  toggleCategories() {
-
-  }
 }
