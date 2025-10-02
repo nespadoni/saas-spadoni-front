@@ -1,0 +1,29 @@
+<p-carousel
+  [value]="stores"
+  [numVisible]="4"
+  [numScroll]="1"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+  [autoplayInterval]="5000"
+  containerStyleClass="stores-carousel"
+>
+  <ng-template let-store #item>
+    <div class="store-card-wrapper">
+      <div class="store-card">
+        <div class="store-image">
+          <img src="/assets/images/lojas/{{ store.image }}" [alt]="store.name" />
+        </div>
+        <div class="store-info">
+          <div class="store-name">{{ store.name }}</div>
+          <div class="store-category">{{ store.category }}</div>
+          <div class="store-products">{{ store.products }}</div>
+          <div class="store-state">{{ store.state }}</div>
+        </div>
+        <div class="store-actions">
+          <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+          <p-button icon="pi pi-arrow-up-right" styleClass="ml-2" />
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
