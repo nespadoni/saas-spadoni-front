@@ -1,0 +1,156 @@
+<nav class="header-nav-main" role="navigation">
+  <div class="header-nav-main-wrapper">
+    <ul class="header-nav-main-list">
+
+      <!-- EXPLORAR -->
+      <li class="header-nav-main-item">
+        <a routerLink="/catalogo"
+           routerLinkActive="active"
+           class="header-nav-main-link">
+          <span>Explorar</span>
+        </a>
+      </li>
+
+      <!-- CATEGORIAS COM MEGA MENU -->
+      <li class="header-nav-main-item dropdown">
+        <a class="header-nav-main-link">
+          <span>Categorias</span>
+          <i class="fa fa-chevron-down dropdown-icon"></i>
+        </a>
+
+        <div class="dropdown-menu mega-menu">
+          <div class="mega-menu-grid">
+            <!-- Categoria 1 -->
+            <a routerLink="/catalogo/ceramica" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-hands"></i>
+              </div>
+              <div class="category-info">
+                <h4>Cerâmica</h4>
+                <span>Da argila ao forno</span>
+              </div>
+            </a>
+
+            <!-- Categoria 2 -->
+            <a routerLink="/catalogo/biscuit" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <div class="category-info">
+                <h4>Biscuit</h4>
+                <span>Arte modelável</span>
+              </div>
+            </a>
+
+            <!-- Categoria 3 -->
+            <a routerLink="/catalogo/madeira" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div class="category-info">
+                <h4>Madeira</h4>
+                <span>Entalhe artístico</span>
+              </div>
+            </a>
+
+            <!-- Categoria 4 -->
+            <a routerLink="/catalogo/resina" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-palette"></i>
+              </div>
+              <div class="category-info">
+                <h4>Resina</h4>
+                <span>Arte contemporânea</span>
+              </div>
+            </a>
+
+            <!-- Categoria 5 -->
+            <a routerLink="/catalogo/decoracao" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="category-info">
+                <h4>Decoração</h4>
+                <span>Peças únicas</span>
+              </div>
+            </a>
+
+            <!-- Categoria 6 -->
+            <a routerLink="/catalogo/tecido" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-cut"></i>
+              </div>
+              <div class="category-info">
+                <h4>Tecido</h4>
+                <span>Costura artesanal</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Footer do Mega Menu -->
+          <div class="mega-menu-footer">
+            <a routerLink="/catalogo" class="view-all-btn">
+              <span>Ver Todas as Categorias</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ARTESÃOS -->
+      <li class="header-nav-main-item dropdown">
+        <a class="header-nav-main-link">
+          <span>Artesãos</span>
+          <i class="fa fa-chevron-down dropdown-icon"></i>
+        </a>
+
+        <div class="dropdown-menu">
+          <a routerLink="/lojas" class="dropdown-link">
+            <i class="fas fa-store"></i>
+            <span>Todas as Lojas</span>
+          </a>
+          <a routerLink="/lojas/certificados" class="dropdown-link">
+            <i class="fas fa-certificate"></i>
+            <span>Artesãos Certificados</span>
+          </a>
+          <a routerLink="/lojas/novos" class="dropdown-link">
+            <i class="fas fa-star"></i>
+            <span>Novos Artesãos</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a routerLink="/artesao/cadastro" class="dropdown-link highlight">
+            <i class="fas fa-user-plus"></i>
+            <span>Vender na Artiza</span>
+          </a>
+        </div>
+      </li>
+
+      <!-- SOBRE -->
+      <li class="header-nav-main-item dropdown">
+        <a class="header-nav-main-link">
+          <span>Sobre</span>
+          <i class="fa fa-chevron-down dropdown-icon"></i>
+        </a>
+
+        <div class="dropdown-menu">
+          <a routerLink="/sobre" class="dropdown-link">
+            <i class="fas fa-info-circle"></i>
+            <span>Sobre a Artiza</span>
+          </a>
+          <a routerLink="/como-funciona" class="dropdown-link">
+            <i class="fas fa-question-circle"></i>
+            <span>Como Funciona</span>
+          </a>
+          <a routerLink="/blog" class="dropdown-link">
+            <i class="fas fa-newspaper"></i>
+            <span>Blog</span>
+          </a>
+          <a routerLink="/contato" class="dropdown-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contato</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
