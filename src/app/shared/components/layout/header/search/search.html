@@ -1,0 +1,17 @@
+<div class="header-nav-search">
+  <div class="header-nav-search-wrapper">
+    <form (submit)="onSearch($event)" class="search-form">
+      <input type="search"
+             placeholder="Buscar produtos, lojas ou artesãos"
+             [(ngModel)]="searchQuery"
+             name="search"
+             class="search-input">
+      <button class="search-dropdown" type="button">
+        <span>Lojas <i class="fa fa-angle-down"></i></span>
+      </button>
+    </form>
+    <button type="submit" class="search-button" aria-label="Buscar">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
