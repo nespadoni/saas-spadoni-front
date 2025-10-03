@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Auth } from './auth';
+import { TypeSelectionRegister } from './type-selection-register';
 
-describe('Auth', () => {
-  let component: Auth;
-  let fixture: ComponentFixture<Auth>;
+describe('TypeSelectionRegister', () => {
+  let component: TypeSelectionRegister;
+  let fixture: ComponentFixture<TypeSelectionRegister>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Auth]
+      imports: [TypeSelectionRegister]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Auth);
+    fixture = TestBed.createComponent(TypeSelectionRegister);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,65 @@
+<main class="type-register-page background">
+  <!-- Header fora do container branco -->
+  <div class="page-header">
+    <h1>Bem-vindo à Artiza</h1>
+    <p>Escolha como deseja se cadastrar</p>
+  </div>
+
+  <!-- Container branco apenas para os cards -->
+  <div class="type-register-container">
+    <div class="cards-wrapper">
+
+      <!-- Card Cliente -->
+      <section class="register-card register-client" routerLink="/cadastro/cliente">
+        <div class="card-icon">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div class="card-content">
+          <h2>Sou Cliente</h2>
+          <p>Quero comprar peças artesanais únicas</p>
+          <ul class="card-benefits">
+            <li><i class="fas fa-check"></i> Acesso a milhares de produtos</li>
+            <li><i class="fas fa-check"></i> Compra 100% segura</li>
+            <li><i class="fas fa-check"></i> Entrega para todo Brasil</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="card-cta">
+            Criar conta
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+        <div class="card-badge">Popular</div>
+      </section>
+
+      <!-- Card Lojista -->
+      <section class="register-card register-seller" routerLink="/cadastro/lojista">
+        <div class="card-icon">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="card-content">
+          <h2>Sou Artesão</h2>
+          <p>Quero vender minhas criações</p>
+          <ul class="card-benefits">
+            <li><i class="fas fa-check"></i> Venda sem taxas ocultas</li>
+            <li><i class="fas fa-check"></i> Alcance milhares de clientes</li>
+            <li><i class="fas fa-check"></i> Suporte completo</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <span class="card-cta">
+            Criar conta
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+        <div class="card-badge premium">Premium</div>
+      </section>
+
+    </div>
+
+    <!-- Footer dentro do container branco -->
+    <div class="page-footer">
+      <p>Já tem uma conta? <a routerLink="/login" class="login-link">Faça login</a></p>
+    </div>
+  </div>
+</main>
