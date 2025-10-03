@@ -5,8 +5,10 @@ import {RegisterClient} from './register/register-client/register-client';
 import {RegisterSeller} from './register/register-seller/register-seller';
 import {ForgotPassword} from './login/forgot-password/forgot-password';
 import {Register} from './register/register';
+import {TypeSelectionRegister} from './type-selection-register/type-selection-register';
 
 const routes: Routes = [
+  {path: 'type-selection-register', component: TypeSelectionRegister},
   { path: 'login', component: Login },
   { path: 'register', component: Register },
   { path: 'register/client', component: RegisterClient },
